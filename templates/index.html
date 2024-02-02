@@ -1,0 +1,265 @@
+<!-- index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Paper Outline Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], button {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%; /* Make the text box full width */
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #outlineResult {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            max-height: 300px; /* Set a fixed height */
+            overflow: auto; /* Enable scroll if needed */
+        }
+        #checkboxForm {
+            display: none;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .checkbox-menu {
+            list-style: none;
+            padding: 0;
+        }
+        #checkboxForm .checkbox-menu {
+            max-height: 300px; /* Set a maximum height */
+            overflow-y: auto; /* Enable vertical scroll if needed */
+        }
+        .checkbox-group {
+            background-color: #9fd8df; /* Set a background color for headings */
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            background-color: #e6d59d; /* Set a background color for sub-headings */
+            padding: 5px;
+            border-radius: 4px;
+        }
+        .checkbox-item input {
+            margin-right: 5px;
+        }
+        .select-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .select-all-button,
+        .unselect-all-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .generate-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px 0;
+        }
+        .collapse-button {
+            background-color: #ddd;
+            color: #333;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000; /* Ensure the overlay is on top of other elements */
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel" src="/my-app/src/App.js"></script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Paper Outline Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        p {
+            margin: 15px 0;
+        }
+        /* Additional CSS styles can be added here */
+    </style>
+</head>
+<body>
+    <h1>Research Paper Outline Generator</h1>
+    <form>
+        <label for="researchTopic">Enter the topic of your research paper:</label>
+        <input
+            type="text"
+            id="researchTopic"
+            name="researchTopic"
+            required
+        />
+        <button type="button" onclick="generateOutline()">Generate Outline</button>
+    </form>
+
+    <div id="outlineResult"></div> <!-- This div will display the generated outline -->
+
+    <!-- <div id="generatedContent"></div>  This div will display the generated content -->
+<!--
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="/my-app/src/App.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Paper Outline Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        p {
+            margin: 15px 0;
+        }
+        #outlineResult {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            max-height: 300px; /* Set a fixed height */
+            overflow: auto; /* Enable scroll if needed */
+        }
+        /* Additional CSS styles can be added here */
+    </style>
+</head>
+<body>
+    <h1>Research Paper Outline Generator</h1>
+    <form>
+        <label for="researchTopic">Enter the topic of your research paper:</label>
+        <input
+            type="text"
+            id="researchTopic"
+            name="researchTopic"
+            required
+        />
+        <button type="button" onclick="generateOutline()">Generate Outline</button>
+    </form>
+
+    <div id="outlineResult"></div> <!-- This div will display the generated outline -->
+
+    <div id="generatedContent"></div> <!-- This div will display the generated content -->
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="/my-app/src/App.js"></script>
+    <script>
+        function generateOutline() {
+            // Your JavaScript logic to fetch and display the generated outline
+        }
+
+        function generateSelectedContent() {
+            // Your JavaScript logic to fetch and display the generated content
+        }
+    </script>
+</body>
+</html>
